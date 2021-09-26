@@ -27,7 +27,7 @@ pip install questionary
 
 ## Usage
 
-To use the loan qualifier application simply clone the repository and run the **app.py** 
+To use the loan qualifier application simply clone the repository and run the **app.py** with:
 
 ```python
 python app.py
@@ -103,10 +103,11 @@ Once the program runs and the number of qualifying loans is displayed, the progr
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+**Created by:** Tony Landero<br>
+**Email Adress:** mr.landero@gmail.com
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT
