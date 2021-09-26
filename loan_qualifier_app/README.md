@@ -23,14 +23,6 @@ pip install fire
 pip install questionary
 ```
 
-It should look as so in the command line:<br>
-
-![Installing Fire](images/install_fire.png)<br>
-
-And<br>
-
-![Installing Questionary](images/install_questionary.png)
-
 ---
 
 ## Usage
