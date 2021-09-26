@@ -16,7 +16,20 @@ This project leverages python 3.7 with the following packages:
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application first install the following dependencies:
+
+```python
+pip install fire
+pip install questionary
+```
+
+It should look as so in the command line:<br>
+
+![Installing Fire](images/install_fire.png)<br>
+
+And<br>
+
+![Installing Questionary](images/install_questionary.png)
 
 ---
 
