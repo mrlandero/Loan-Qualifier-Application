@@ -24,6 +24,7 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
+# Function to retrieve the csv data from the attached file
 
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
@@ -31,7 +32,8 @@ def load_bank_data():
     Returns:
         The bank data from the data rate sheet CSV file.
     """
-
+    # Asks the user to enter the cvs file they want to use
+    
     csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
