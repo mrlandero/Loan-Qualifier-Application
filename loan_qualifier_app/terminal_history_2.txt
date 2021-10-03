@@ -1,0 +1,50 @@
+   76  pip install fire
+   77  pip install questionary
+   78  python app.py 
+   79  python app.py 
+   80  python app.py 
+   81  python app.py
+   82  python app.py 
+   83  python app.py
+   84  python app.py 
+   85  python app.py 
+   86  python app.py 
+   87  python app.py 
+   88  python app.py 
+   89  pytnon app.py 
+   90  python app.py 
+   91  git status
+   92  git add -A
+   93  git commit -m "Fixed save_qualifying_loans function"
+   94  git status
+   95  git push origin main
+   96  python app.py
+   97  python app.py 
+   98  python app.py 
+   99  python app.py 
+  100  python app.py 
+  101  python app.py 
+  102  python app.py 
+  103  git status
+  104  git add -A
+  105  git commit -m "Added a prompt to ask user if they want to save the new data"
+  106  git push origin main
+  107  history > terminal_history.txt
+  108  history
+  109  terminal_history.txt
+  110  history 50 
+  111  history 50 > terminal_history.txt
+  112  cat terminal_history.txt 
+  113  git status
+  114  git add -A
+  115  git commit -m "Added comments to app.py & added terminal history"
+  116  git push origin main
+  117  git pull origin main
+  118  git push origin main
+  119  git status
+  120  git add -
+  121  git add -A
+  122  git status
+  123  git commit -m "Finished adding comments to app.py"
+  124  git push origin main
+  125  history 50 > terminal_history_2.txt
