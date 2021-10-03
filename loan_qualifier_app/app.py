@@ -33,7 +33,7 @@ def load_bank_data():
         The bank data from the data rate sheet CSV file.
     """
     # Asks the user to enter the cvs file they want to use
-    
+
     csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
@@ -41,7 +41,7 @@ def load_bank_data():
 
     return load_csv(csvpath)
 
-
+# This is where we ask users for their info to analyze
 def get_applicant_info():
     """Prompt dialog to get the applicant's financial information.
 
@@ -55,6 +55,7 @@ def get_applicant_info():
     loan_amount = questionary.text("What's your desired loan amount?").ask()
     home_value = questionary.text("What's your home value?").ask()
 
+    # Converting all input "strings" into "ints" and "floats" to work mathematically
     credit_score = int(credit_score)
     debt = float(debt)
     income = float(income)
@@ -63,7 +64,7 @@ def get_applicant_info():
 
     return credit_score, debt, income, loan_amount, home_value
 
-
+# This function will tell us which loans the user qualifies for
 def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_value):
     """Determine which loans the user qualifies for.
 
@@ -100,10 +101,12 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     bank_data_filtered = filter_debt_to_income(monthly_debt_ratio, bank_data_filtered)
     bank_data_filtered = filter_loan_to_value(loan_to_value_ratio, bank_data_filtered)
 
+    # Print qualifying bank data to determine success of filters
     print(f"Found {len(bank_data_filtered)} qualifying loans")
     # print(bank_data_filtered)
     return bank_data_filtered
 
+# This function asks the user if they would like to save the data to a csv and does it if 'y'
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
@@ -112,17 +115,19 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+    # Header row for the new csv file
     header = ["Lender", "Max_Loan_Amount", "Max_LTV", "Max_DTI", "Min_Credit_Score", "Interest Rate"]
+    # The path where we want to save the new csv file.
     csvpath = Path("qualified_loans.csv")
     with open(csvpath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
 
         csvwriter.writerow(header)
-    
+        # This will extract the rows from our list and populate them into the new csv file
         for row in qualifying_loans:
             print(row)
             csvwriter.writerow(row)
-
+        # Asks the user if they want to save the collected bank approval data
         user_answer = questionary.text("Would you like to save the list of loans? y/n").ask()
     if user_answer == 'y': 
         print("Great! Saving in progres...")
